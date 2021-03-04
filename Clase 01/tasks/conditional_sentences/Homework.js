@@ -6,6 +6,7 @@ function capitalizeFirstLetter(string) {
   return string[0].toUpperCase() + string.substring(1).toLowerCase();
 };
 
+// Function that evaluates, normalizes and sorts score of each student
 function approvedStudent(student) {
   if (student.score >= noteToApprove) {
     studentsApproved.push(normalizeNames(student))
@@ -13,6 +14,7 @@ function approvedStudent(student) {
   };
 };
 
+// Function to normalize names
 function normalizeNames(student) {
   return {
     ...student,
@@ -32,7 +34,6 @@ function approvedUsingFor(studentsList) {
 // ============= WHILE =============
 
 let count = 0;
-
 function approvedUsingWhile(studentsList = Students) {
   while (count < studentsList.length) {
     approvedStudent(studentsList[count]);
@@ -41,7 +42,6 @@ function approvedUsingWhile(studentsList = Students) {
 };
 
 // ============= DO/WHILE =============
-
 function approvedUsingDoWhile(studentsList = Students) {
   do {
     approvedStudent(studentsList[count]);
@@ -49,9 +49,10 @@ function approvedUsingDoWhile(studentsList = Students) {
   } while(count < studentsList.length);
 };
 
-
+// ============= RESULTS (ejecute one at a time) =============
 approvedUsingFor(Students)
 // approvedUsingWhile(Students)
 // approvedUsingDoWhile(Students)
 
 console.log(studentsApproved)
+// ===========================================================
