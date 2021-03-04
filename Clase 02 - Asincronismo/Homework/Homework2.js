@@ -4,7 +4,7 @@ function capitalizeFirstLetter(string) {
     return string[0].toUpperCase() + string.substring(1).toLowerCase();
   };
 
-  var someMethod = function() {
+  var someMethod = async function() {
     var promise = new Promise(function(resolve, reject){
        setTimeout(function() {
           console.log('Some method');
@@ -16,7 +16,7 @@ function capitalizeFirstLetter(string) {
 
 // Function that evaluates score of each student
 let studentsList = [];
-var approvedStudents = function(data, score) {
+var approvedStudents = async function(data, score) {
     var promise = new Promise(function(resolve, reject) {
         setTimeout(function() {
             data.forEach(student => {
@@ -32,7 +32,7 @@ var approvedStudents = function(data, score) {
 };
 
 // Function that normalize name and lastname of each student
-var normalizeNames = function() {
+var normalizeNames = async function() {
     var promise = new Promise(function(resolve, reject) {
         setTimeout(function() {
             studentsList.forEach(student => {
@@ -47,7 +47,7 @@ var normalizeNames = function() {
 };
 
 // Function that sort by ascending order the list of students
-var sortStudents = function() {
+var sortStudents = async function() {
     var promise = new Promise(function(resolve, reject) {
         setTimeout(function() {
             studentsList.sort((a, b) => a.score - b.score)
