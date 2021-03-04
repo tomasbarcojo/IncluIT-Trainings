@@ -6,17 +6,17 @@ Example:
 ```
 students = [
   {
-    name: 'JOHN'
+    name: 'JOHN',
     lastname: 'DOE',
     score: 4
   },
   {
-    name: 'EVELYN'
+    name: 'EVELYN',
     lastname: 'JACKSON',
     score: 8
   },
   {
-    name: 'JAMES'
+    name: 'JAMES',
     lastname: 'SHAW',
     score: 2
   }

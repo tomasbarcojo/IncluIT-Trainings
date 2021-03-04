@@ -1,31 +1,57 @@
-/* ## Scenario
-I have a collection of students with different results each. You should create three different implementations that iterate on the entire list and only return the approved students with a score of 4 (included) using for, while, and do/while.
+const Students = require('./db');
+const noteToApprove = 4;
+let studentsApproved = [];
 
-Example:
+function capitalizeFirstLetter(string) {
+  return string[0].toUpperCase() + string.substring(1).toLowerCase();
+};
 
-```
-students = [
-  {
-    name: 'JOHN',
-    lastname: 'DOE',
-    score: 4
-  },
-  {
-    name: 'EVELYN',
-    lastname: 'JACKSON',
-    score: 8
-  },
-  {
-    name: 'JAMES',
-    lastname: 'SHAW',
-    score: 2
-  }
-];
-```
+function approvedStudent(student) {
+  if (student.score >= noteToApprove) {
+    studentsApproved.push(normalizeNames(student))
+    studentsApproved.sort((a, b) => a.score - b.score)
+  };
+};
 
-Each student approved should be print in the console.
-Plus:
-* To add more complexity, you can sort array ascending using a score
-* Minimum score should be parametrizable
-* Convert name and last name to capitalize */
+function normalizeNames(student) {
+  return {
+    ...student,
+    lastname: capitalizeFirstLetter(student.lastname),
+    name: capitalizeFirstLetter(student.name),
+  };
+};
 
+// ============= FOR =============
+
+function approvedUsingFor(studentsList) {
+  studentsList.forEach(student => {
+    approvedStudent(student);
+  });
+};
+
+// ============= WHILE =============
+
+let count = 0;
+
+function approvedUsingWhile(studentsList = Students) {
+  while (count < studentsList.length) {
+    approvedStudent(studentsList[count]);
+    count++;
+  };
+};
+
+// ============= DO/WHILE =============
+
+function approvedUsingDoWhile(studentsList = Students) {
+  do {
+    approvedStudent(studentsList[count]);
+    count++;
+  } while(count < studentsList.length);
+};
+
+
+approvedUsingFor(Students)
+// approvedUsingWhile(Students)
+// approvedUsingDoWhile(Students)
+
+console.log(studentsApproved)
