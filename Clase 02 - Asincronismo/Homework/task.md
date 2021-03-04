@@ -1,0 +1,3 @@
+- Crear una función asíncrona que demore unos segundos en completarse, pero que por dentro no tenga ninguna lógica, es decir, no vale usar bucles ni crear requests http, ni leer o escribir archivos.
+- Transformar el código que hicieron ayer de filtro de alumnos a una promesa
+- Utilizar ambos puntos anteriores de forma simultánea, e imprimir un texto en consola una vez que se terminen ambos procesos

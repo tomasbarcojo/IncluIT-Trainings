@@ -1,4 +1,4 @@
-const Students = require('./db');
+const students = require('./db');
 const noteToApprove = 4;
 let studentsApproved = [];
 
@@ -50,9 +50,9 @@ function approvedUsingDoWhile(studentsList = Students) {
 };
 
 // ============= RESULTS (ejecute one at a time) =============
-approvedUsingFor(Students)
-// approvedUsingWhile(Students)
-// approvedUsingDoWhile(Students)
+approvedUsingFor(students)
+// approvedUsingWhile(students)
+// approvedUsingDoWhile(students)
 
 console.log(studentsApproved)
 // ===========================================================

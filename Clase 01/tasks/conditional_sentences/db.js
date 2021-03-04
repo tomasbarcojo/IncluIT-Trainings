@@ -22,7 +22,7 @@ const Students = [
   {
     "name": "PEDro",
     "lastname": "miller",
-    "score": 6
+    "score": 3
   }
 ];
 
