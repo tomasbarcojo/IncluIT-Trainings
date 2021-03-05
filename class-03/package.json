@@ -1,0 +1,12 @@
+{
+  "name": "array-test-tomasbarcojo",
+  "version": "1.0.0",
+  "description": "A left rotation of an array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["array", "rotation"],
+  "author": "",
+  "license": "ISC"
+}
