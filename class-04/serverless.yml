@@ -1,0 +1,16 @@
+service: exercise-class-04
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  currentTime:
+    handler: handler.main
+    events:
+      - http:
+          path: ping
+          method: get
